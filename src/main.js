@@ -68,7 +68,6 @@ const cardNumberPattern = {
     const foundMask = dynamicMasked.compiledMasks.find(function (item) {
       return number.match(item.regex)
     })
-
     return foundMask
   },
 }
@@ -78,10 +77,6 @@ const cardNumberMasked = IMask(cardNumber, cardNumberPattern)
 const addButton = document.querySelector("#add-card")
 addButton.addEventListener("click", () => {
   alert("Cartao Adicionado")
-})
-
-document.querySelector("form").addEventListener("submit", (event) => {
-  event.preventDefault()
 })
 
 const cardHolder = document.querySelector("#card-holder")
